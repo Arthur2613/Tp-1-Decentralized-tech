@@ -61,8 +61,11 @@ def main():
         while True:
             clear_screen()
             print_grid(grid)
+            print("\nPress 'q' and hit Enter to quit.")
             grid = next_generation(grid)
             time.sleep(0.5)
+            if input().strip().lower() == 'q':
+                break
     except KeyboardInterrupt:
         print("\nGame terminated.")
 
